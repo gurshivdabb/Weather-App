@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <script src="https://kit.fontawesome.com/549ed9b607.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="mainBox">
+        <div class="searchbar">
+            <input type="text" class="input" id="cityInput" placeholder="Enter a city">
+            <button class="inputbtn" onclick="getWeather()">Enter</button>
+        </div>
+        
+        <div class="weatherInfo">    
+            <div class="weatherIcon">
+                <i id = "sunny" class="fa-regular fa-sun"></i>
+                <i id="thunderstorm" style="display: none;" class="fa-solid fa-cloud-bolt"></i>
+                <i id="rain" style="display: none;" class="fa-solid fa-cloud-rain"></i>
+                <i id="cloud" style="display: none;" class="fa-solid fa-cloud"></i>
+            </div>
+
+            <div class="temp">
+                <div id="origTemp">
+                    24<span id="degreeIcon"> <i class="fa-regular fa-circle"></i> </span>
+                </div>
+                <div id="feelsLikeTemp">
+                    Feels like 20<span id="degreeIcon"> <i class="fa-regular fa-circle"></i> </span>
+                </div>
+                <div id="minMaxType">
+                    <span id="weatherType"> Sunny </span> <span class="up-downIcon"> <i class="fa-solid fa-arrow-up"></i> 
+                    </span> <span id="maxTemp">30</span> /
+                    <span class="up-downIcon"><i class="fa-solid fa-arrow-down"></i></span>
+                    <span id="minTemp">18</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="cityName">
+            Winnipeg
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

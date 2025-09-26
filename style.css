@@ -1,0 +1,125 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* stops scroll */
+}
+
+body {
+    background-image: linear-gradient(215deg,
+            #1a1f3b,
+            /* deep indigo base */
+            #2c2f54,
+            /* muted violet-blue */
+            #3e4a72,
+            /* stormy blue */
+            #5c4d7d,
+            /* violet highlight */
+            #4a6785
+            /* subtle lively bluish tint */
+        );
+    background-size: cover;
+    animation: gradientShift 5s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.mainBox {
+    border: 5px solid black;
+    border-radius: 10px;
+    margin-top: 5rem;
+    margin-right: 30%;
+    margin-left: 30%;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.mainBox:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Search Bar */
+.searchbar {
+    margin: 1%;
+    margin-top: 3%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1%;
+}
+
+.input,
+.inputbtn {
+    border: 2px solid black;
+    border-radius: 0.5vb;
+    font-size: 110%;
+    color: white;
+    text-align: center;
+    background-color: rgba(255,255,255, 0.1);
+    padding: 3px;
+}
+
+.input:focus {
+    outline: none;
+}
+
+.inputbtn:active {
+    background-color: rgba(255,255,255, 0.3);
+}
+
+/* Weather Info */
+.weatherInfo, #cityName {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5%;
+}
+
+.weatherInfo {
+    gap: 25px;
+    margin-top: 15px;
+}
+
+.weatherIcon {
+    font-size: 100px;
+    color: lightgoldenrodyellow;
+}
+
+#degreeIcon {
+    font-size: 25%;
+    position: relative;
+    top: -2em;
+}
+
+.up-downIcon {
+    font-size: 10px;
+}
+
+.temp {
+    text-align: end;
+    padding: 10px;
+}
+
+#origTemp {
+    font-size: 60px;
+}
+
+#feelsLikeTemp {
+    font-size: 17px;
+}
+
+#minMaxType {
+    font-size: 15px;
+    padding: 5px;
+}
+
+/* City Name */
+#cityName {
+    font-size: 20px;
+    text-transform: uppercase;
+}
